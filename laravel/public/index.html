@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Украшения из бисера и вязаные игрушки ручной работы.">
+  <title>Handmade - с любовью</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="#">
+        <svg class="logo-mark" viewBox="0 0 48 44" aria-hidden="true">
+          <path d="M24 39S6.5 28.6 6.5 17.9C6.5 11.9 11 7.5 16.6 7.5c3.2 0 6 1.5 7.4 4 1.4-2.5 4.2-4 7.4-4C37 7.5 41.5 11.9 41.5 17.9 41.5 28.6 24 39 24 39Z"/>
+          <path d="M15.5 21.5c1.6 3.3 4.6 6.4 8.5 8.7"/>
+        </svg>
+        <span class="logo-text"><b>Handmade</b><small>с любовью ♡</small></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+      <nav class="nav">
+        <div class="nav-head">
+          <span class="nav-brand">Handmade</span>
+          <span class="nav-note">с любовью ♡</span>
+        </div>
+        <a href="catalog.html">Каталог</a>
+        <a href="#about">О мастерской</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#contacts">Контакты</a>
+        <div class="nav-foot">
+          <a class="nav-phone" href="tel:+79001234567" data-site="phone-link"><span data-site="phone">+7 (900) 123-45-67</span></a>
+          <span class="nav-hours" data-site="hours">Ежедневно 10:00–20:00</span>
+          <span class="nav-address" data-site="address">Москва, ул. Лавандовая, 7</span>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Поиск" id="searchBtn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.2"/><path d="m15.6 15.6 4.4 4.4"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Избранное">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.2S4.6 15.4 4.6 10.4A4 4 0 0 1 12 7.6a4 4 0 0 1 7.4 2.8c0 5-7.4 9.8-7.4 9.8Z"/></svg>
+        </button>
+        <button class="icon-btn bag" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.7 8h12.6l1.2 12.2H4.5L5.7 8Z"/><path d="M9.2 8V6.2a2.8 2.8 0 0 1 5.6 0V8"/></svg>
+          <i id="cartCount">0</i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img class="tint" src="https://images.unsplash.com/photo-1757892798174-84d76c8b9cdb?auto=format&fit=crop&w=2000&q=85" alt="Кулон-бабочка из бисера на лавандовом шёлке">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner">
+        <h1>Уникальные<br>украшения и игрушки<br>ручной работы</h1>
+        <p class="hero-sub">Из бисера и с любовью <span>♡</span><i class="hero-rule"></i></p>
+        <a class="btn btn-light" href="catalog.html">Перейти в каталог <span class="btn-arrow">→</span></a>
+      </div>
+      <svg class="sparkle sparkle-left" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.6 5.2 3.3 7.9 8.5 8.5-5.2.6-7.9 3.3-8.5 8.5-.6-5.2-3.3-7.9-8.5-8.5C8.7 10.4 11.4 7.7 12 2.5Z"/></svg>
+      <svg class="sparkle sparkle-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.6 5.2 3.3 7.9 8.5 8.5-5.2.6-7.9 3.3-8.5 8.5-.6-5.2-3.3-7.9-8.5-8.5C8.7 10.4 11.4 7.7 12 2.5Z"/></svg>
+    </section>
+
+    <section class="categories wrap" aria-label="Категории">
+      <a class="category-card" href="catalog.html?cat=bead">
+        <span class="cat-thumb"><img class="tint tint-photo" src="https://images.unsplash.com/photo-1786118791837-1a2f74beabf6?auto=format&fit=crop&w=600&q=80" alt="Колье из бисера"></span>
+        <span class="cat-label">Украшения<br>из бисера <b>→</b></span>
+      </a>
+      <a class="category-card" href="catalog.html?cat=toy">
+        <span class="cat-thumb"><img class="tint cat-bunny" src="https://images.unsplash.com/photo-1755315897817-97bd6ec34256?auto=format&fit=crop&w=600&q=80" alt="Вязаная игрушка зайка"></span>
+        <span class="cat-label">Вязаные<br>игрушки <b>→</b></span>
+      </a>
+      <a class="category-card" href="catalog.html?cat=gift">
+        <span class="cat-thumb"><img class="tint cat-gift" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80" alt="Подарочная упаковка"></span>
+        <span class="cat-label">Подарки<br>и сувениры <b>→</b></span>
+      </a>
+      <a class="category-card custom-card" href="#contacts" data-custom-order>
+        <span class="cat-thumb heart-thumb">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.2S4.6 15.4 4.6 10.4A4 4 0 0 1 12 7.6a4 4 0 0 1 7.4 2.8c0 5-7.4 9.8-7.4 9.8Z"/></svg>
+        </span>
+        <span class="cat-label">Индивидуальные<br>заказы <b>→</b></span>
+      </a>
+    </section>
+
+    <section class="wrap" id="about">
+      <div class="about">
+        <div class="about-photo">
+          <img class="tint" src="https://images.unsplash.com/photo-1638020522563-db439913b29f?auto=format&fit=crop&w=1000&q=85" alt="Вязаный мишка ручной работы">
+          <svg class="about-heart" viewBox="0 0 80 80" aria-hidden="true"><path d="M39 60S18 46 18 32c0-7 5-11 11-11 4 0 8 2 10 6 2-4 6-6 10-6 6 0 11 4 11 11 0 14-21 28-21 28Z"/><path d="M56 18c6 1 9 5 9 11 0 9-8 17-17 23"/></svg>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">Немного обо мне</p>
+          <h2>О моей мастерской <span>♡</span></h2>
+          <p>Меня зовут ... и я создаю украшения из бисера и вяжу игрушки вручную. Каждое изделие - это частичка тепла, вдохновения и любви.</p>
+          <p>Здесь вы найдёте уникальные вещи, которые подчеркнут ваш стиль или станут особенным подарком.</p>
+          <a class="btn btn-primary" href="#contacts">Узнать больше</a>
+        </div>
+
+        <div class="benefits">
+          <div class="benefit">
+            <span class="b-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 9.2 6.6 4h10.8l3.2 5.2L12 20.5 3.4 9.2Z"/><path d="M3.4 9.2h17.2M9.1 4l2.9 5.2L14.9 4M12 9.2v11.3"/></svg></span>
+            <span>Ручная работа<br>и внимание к деталям</span>
+          </div>
+          <div class="benefit">
+            <span class="b-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.2S4.6 15.4 4.6 10.4A4 4 0 0 1 12 7.6a4 4 0 0 1 7.4 2.8c0 5-7.4 9.8-7.4 9.8Z"/></svg></span>
+            <span>Качественные<br>материалы</span>
+          </div>
+          <div class="benefit">
+            <span class="b-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.6" y="8.6" width="16.8" height="11.8" rx="2"/><path d="M2.6 8.6h18.8M12 8.6v11.8"/><path d="M12 8.6S9.6 3.4 7.5 4.7C5.6 5.9 8.6 8.6 12 8.6Zm0 0s2.4-5.2 4.5-3.9c1.9 1.2-1.1 3.9-4.5 3.9Z"/></svg></span>
+            <span>Быстрая<br>доставка</span>
+          </div>
+          <svg class="branch" viewBox="0 0 120 120" aria-hidden="true">
+            <path d="M18 104C38 84 58 58 66 24"/>
+            <path d="M52 66c-10-2-16-9-16-19 10 0 18 7 16 19Zm8-16c10-1 16-8 17-18-10 0-18 7-17 18Zm-24 30c-10-2-15-9-15-18 10 0 17 7 15 18Zm12-22c9-3 13-11 12-21-10 2-16 10-12 21Z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="products wrap" id="catalog">
+      <div class="section-heading">
+        <h2>Популярные товары</h2>
+        <span class="heading-line"></span>
+        <a href="catalog.html">Смотреть все →</a>
+      </div>
+
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="wrap" id="delivery">
+      <div class="gift">
+        <img class="tint gift-media" src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=2000&q=85" alt="Подарочная коробка с лентой">
+        <div class="gift-shade"></div>
+        <div class="gift-copy">
+          <h2>Подарите тепло<br>и красоту близким</h2>
+          <p>Уникальные изделия ручной работы</p>
+          <a class="btn btn-light" href="catalog.html">Перейти в каталог <span class="btn-arrow">→</span></a>
+        </div>
+        <svg class="gift-heart" viewBox="0 0 80 60" aria-hidden="true"><path d="M36 48C20 38 12 28 12 20c0-5 4-8 8-8 3 0 6 1.6 8 4.4C30 13.6 33 12 36 12c4 0 8 3 8 8 0 8-8 18-8 18Z"/><path d="M48 20c8 4 14 12 18 24"/></svg>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a class="logo footer-logo" href="#">
+          <svg class="logo-mark" viewBox="0 0 48 44" aria-hidden="true">
+            <path d="M24 39S6.5 28.6 6.5 17.9C6.5 11.9 11 7.5 16.6 7.5c3.2 0 6 1.5 7.4 4 1.4-2.5 4.2-4 7.4-4C37 7.5 41.5 11.9 41.5 17.9 41.5 28.6 24 39 24 39Z"/>
+            <path d="M15.5 21.5c1.6 3.3 4.6 6.4 8.5 8.7"/>
+          </svg>
+          <span class="logo-text"><b>Handmade</b><small>с любовью ♡</small></span>
+        </a>
+
+        <div class="socials">
+          <a href="#" aria-label="ВКонтакте" data-site="vk-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><text x="2.5" y="17" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="800" fill="currentColor" stroke="none">VK</text></svg>
+          </a>
+          <a href="#" aria-label="Telegram" data-site="telegram-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 4.2 3.4 11l5.3 1.9 2 5.9 2.8-3.4 4.4 3.3 3.3-14.5Z"/><path d="m8.7 12.9 9-6.6"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" data-site="instagram-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.6"/><circle cx="12" cy="12" r="3.8"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#delivery">Доставка</a>
+          <a href="#delivery">Оплата</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <a class="footer-contact" href="tel:+79001234567" data-site="phone-link"><span data-site="phone">+7 (900) 123-45-67</span></a>
+        <a class="footer-contact" href="mailto:hello@handmade.ru" data-site="email-link"><span data-site="email">hello@handmade.ru</span></a>
+        <span class="footer-contact" data-site="hours">Ежедневно 10:00–20:00</span>
+        <span class="footer-contact" data-site="address">Москва, ул. Лавандовая, 7</span>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Handmade. Все права защищены.</span>
+        <a class="to-top" href="#" aria-label="Наверх">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18.5V6M6.2 11.8 12 6l5.8 5.8"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="api-client.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

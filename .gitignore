@@ -1,0 +1,12 @@
+# Секреты и локальные данные
+backend/.env
+
+# Загруженные картинки (оставьте .gitkeep и .htaccess)
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+
+# Служебное
+*.log
+.DS_Store
+Thumbs.db

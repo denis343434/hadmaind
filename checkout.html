@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заказа украшений и игрушек ручной работы Handmade.">
+  <title>Оформление заказа - Handmade</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="checkout">
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <svg class="logo-mark" viewBox="0 0 48 44" aria-hidden="true">
+          <path d="M24 39S6.5 28.6 6.5 17.9C6.5 11.9 11 7.5 16.6 7.5c3.2 0 6 1.5 7.4 4 1.4-2.5 4.2-4 7.4-4C37 7.5 41.5 11.9 41.5 17.9 41.5 28.6 24 39 24 39Z"/>
+          <path d="M15.5 21.5c1.6 3.3 4.6 6.4 8.5 8.7"/>
+        </svg>
+        <span class="logo-text"><b>Handmade</b><small>с любовью ♡</small></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+
+      <nav class="nav">
+        <div class="nav-head">
+          <span class="nav-brand">Handmade</span>
+          <span class="nav-note">с любовью ♡</span>
+        </div>
+        <a href="catalog.html">Каталог</a>
+        <a href="index.html#about">О мастерской</a>
+        <a href="index.html#delivery">Доставка</a>
+        <a href="index.html#contacts">Контакты</a>
+        <div class="nav-foot">
+          <a class="nav-phone" href="tel:+79001234567" data-site="phone-link"><span data-site="phone">+7 (900) 123-45-67</span></a>
+          <span class="nav-hours" data-site="hours">Ежедневно 10:00–20:00</span>
+          <span class="nav-address" data-site="address">Москва, ул. Лавандовая, 7</span>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Поиск" id="searchBtn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.2"/><path d="m15.6 15.6 4.4 4.4"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Избранное">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.2S4.6 15.4 4.6 10.4A4 4 0 0 1 12 7.6a4 4 0 0 1 7.4 2.8c0 5-7.4 9.8-7.4 9.8Z"/></svg>
+        </button>
+        <button class="icon-btn bag" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.7 8h12.6l1.2 12.2H4.5L5.7 8Z"/><path d="M9.2 8V6.2a2.8 2.8 0 0 1 5.6 0V8"/></svg>
+          <i id="cartCount">0</i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Хлебные крошки">
+          <a class="crumb-home" href="index.html">Главная</a>
+          <span>/</span>
+          <a href="catalog.html">Каталог</a>
+          <span>/</span>
+          <b>Оформление заказа</b>
+        </nav>
+        <h1>Оформление заказа</h1>
+        <p>Заполните данные - я свяжусь с вами, чтобы подтвердить детали и оплату</p>
+      </div>
+    </section>
+
+    <section class="wrap checkout" id="checkoutLayout">
+      <div class="checkout-grid">
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <section>
+            <div class="co-head"><span class="co-num">1</span><h2>Контактные данные</h2></div>
+            <div class="field">
+              <label for="co-name">Имя и фамилия</label>
+              <input id="co-name" name="name" type="text" autocomplete="name" placeholder="Анна Смирнова">
+              <span class="field-error"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="co-phone">Телефон</label>
+                <input id="co-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (900) 000-00-00">
+                <span class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="co-email">E-mail</label>
+                <input id="co-email" name="email" type="email" autocomplete="email" placeholder="anna@mail.ru">
+                <span class="field-error"></span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="co-head"><span class="co-num">2</span><h2>Как получить заказ</h2></div>
+            <div class="radio-row">
+              <label class="radio-card">
+                <input type="radio" name="delivery" value="delivery" checked>
+                <span><b>Доставка курьером или почтой</b><small id="coDeliveryLabel">2-5 дней · 390 ₽, бесплатно от 3 000 ₽</small></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="delivery" value="pickup">
+                <span><b>Самовывоз из мастерской</b><small id="coPickupNote">Москва, ул. Лавандовая, 7 · бесплатно</small></span>
+              </label>
+            </div>
+
+            <div id="deliveryFields">
+              <div class="field-row">
+                <div class="field">
+                  <label for="co-city">Город</label>
+                  <input id="co-city" name="city" type="text" autocomplete="address-level2" placeholder="Москва">
+                  <span class="field-error"></span>
+                </div>
+                <div class="field">
+                  <label for="co-address">Адрес</label>
+                  <input id="co-address" name="address" type="text" autocomplete="street-address" placeholder="ул. Пушкина, 10, кв. 5">
+                  <span class="field-error"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="co-comment">Комментарий (необязательно)</label>
+              <textarea id="co-comment" name="comment" placeholder="Пожелания к заказу, удобное время доставки"></textarea>
+            </div>
+          </section>
+
+          <section>
+            <div class="co-head"><span class="co-num">3</span><h2>Оплата</h2></div>
+            <div class="radio-row">
+              <label class="radio-card">
+                <input type="radio" name="payment" value="card" checked>
+                <span><b>Картой онлайн</b><small>Ссылка на оплату придёт после подтверждения</small></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="payment" value="transfer">
+                <span><b>Переводом</b><small>СБП или перевод на карту</small></span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="payment" value="cash">
+                <span><b>При получении</b><small>Наличными или картой курьеру</small></span>
+              </label>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent">
+              <span>Согласен(а) с обработкой персональных данных и условиями заказа</span>
+            </label>
+
+            <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <button class="btn btn-primary checkout-submit" type="submit">Подтвердить заказ <span class="btn-arrow">→</span></button>
+          </section>
+        </form>
+
+        <aside class="checkout-aside">
+          <h2>Ваш заказ</h2>
+          <div id="coItems"></div>
+          <div class="co-divider"></div>
+          <div class="cart-row"><span>Товары</span><b id="coSubtotal"></b></div>
+          <div class="cart-row"><span>Доставка</span><b id="coDelivery"></b></div>
+          <p class="cart-note" id="coNote"></p>
+          <div class="cart-total"><span>Итого</span><b id="coTotal"></b></div>
+          <p class="checkout-hint">Оплата после подтверждения заказа. Я свяжусь с вами по телефону.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wrap" id="checkoutEmpty" hidden>
+      <div class="empty-cart-block">
+        <h1>Корзина пока пуста</h1>
+        <p>Добавьте украшение или игрушку - и возвращайтесь к оформлению.</p>
+        <a class="btn btn-primary" href="catalog.html">Перейти в каталог</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="orderSuccess" hidden>
+      <div class="order-success">
+        <div class="order-check">✓</div>
+        <p class="eyebrow">Заказ принят</p>
+        <h1>Спасибо, <span id="orderName">друг</span>!</h1>
+        <p>Заказ сохранён. Я свяжусь с вами в ближайшее время, чтобы подтвердить состав, доставку и оплату.</p>
+        <div class="order-number">Заказ № <b id="orderNumber"></b></div>
+
+        <dl class="order-summary">
+          <div><dt>Сумма заказа</dt><dd id="orderTotal"></dd></div>
+          <div><dt>Телефон</dt><dd id="orderContact"></dd></div>
+          <div><dt>E-mail</dt><dd id="orderEmail"></dd></div>
+          <div><dt>Получение</dt><dd id="orderDelivery"></dd></div>
+        </dl>
+
+        <div class="order-actions">
+          <a class="btn btn-primary" href="catalog.html">Вернуться в каталог</a>
+          <a class="btn btn-light" href="index.html">На главную</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a class="logo footer-logo" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 48 44" aria-hidden="true">
+            <path d="M24 39S6.5 28.6 6.5 17.9C6.5 11.9 11 7.5 16.6 7.5c3.2 0 6 1.5 7.4 4 1.4-2.5 4.2-4 7.4-4C37 7.5 41.5 11.9 41.5 17.9 41.5 28.6 24 39 24 39Z"/>
+            <path d="M15.5 21.5c1.6 3.3 4.6 6.4 8.5 8.7"/>
+          </svg>
+          <span class="logo-text"><b>Handmade</b><small>с любовью ♡</small></span>
+        </a>
+
+        <div class="socials">
+          <a href="#" aria-label="ВКонтакте" data-site="vk-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><text x="2.5" y="17" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="800" fill="currentColor" stroke="none">VK</text></svg>
+          </a>
+          <a href="#" aria-label="Telegram" data-site="telegram-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 4.2 3.4 11l5.3 1.9 2 5.9 2.8-3.4 4.4 3.3 3.3-14.5Z"/><path d="m8.7 12.9 9-6.6"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" data-site="instagram-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.6"/><circle cx="12" cy="12" r="3.8"/><circle cx="16.9" cy="7.1" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html#delivery">Доставка</a>
+          <a href="index.html#delivery">Оплата</a>
+          <a href="index.html#contacts">Контакты</a>
+        </div>
+      </div>
+
+      <div class="footer-info">
+        <a class="footer-contact" href="tel:+79001234567" data-site="phone-link"><span data-site="phone">+7 (900) 123-45-67</span></a>
+        <a class="footer-contact" href="mailto:hello@handmade.ru" data-site="email-link"><span data-site="email">hello@handmade.ru</span></a>
+        <span class="footer-contact" data-site="hours">Ежедневно 10:00–20:00</span>
+        <span class="footer-contact" data-site="address">Москва, ул. Лавандовая, 7</span>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 Handmade. Все права защищены.</span>
+        <a class="to-top" href="#" aria-label="Наверх">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18.5V6M6.2 11.8 12 6l5.8 5.8"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script src="api-client.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

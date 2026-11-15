@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'accepted' => 'Нужно подтвердить :attribute.',
+    'array' => 'Поле «:attribute» должно быть списком.',
+    'boolean' => 'Поле «:attribute» должно быть да или нет.',
+    'email' => 'Некорректный email.',
+    'exists' => 'Выбранное значение для «:attribute» не найдено.',
+    'file' => 'Поле «:attribute» должно быть файлом.',
+    'in' => 'Недопустимое значение поля «:attribute».',
+    'integer' => 'Поле «:attribute» должно быть целым числом.',
+    'max' => [
+        'array' => 'Поле «:attribute» должно содержать не больше :max элементов.',
+        'file' => 'Файл «:attribute» больше :max КБ.',
+        'numeric' => 'Поле «:attribute» не может быть больше :max.',
+        'string' => 'Поле «:attribute» не может быть длиннее :max символов.',
+    ],
+    'mimetypes' => 'Недопустимый тип файла.',
+    'min' => [
+        'array' => 'Поле «:attribute» должно содержать минимум :min элементов.',
+        'file' => 'Файл «:attribute» меньше :min КБ.',
+        'numeric' => 'Поле «:attribute» должно быть не меньше :min.',
+        'string' => 'Поле «:attribute» должно быть не короче :min символов.',
+    ],
+    'numeric' => 'Поле «:attribute» должно быть числом.',
+    'regex' => 'Некорректный формат поля «:attribute».',
+    'required' => 'Заполните поле «:attribute».',
+    'string' => 'Поле «:attribute» должно быть строкой.',
+    'unique' => 'Такое значение поля «:attribute» уже существует.',
+
+    'attributes' => [
+        'name' => 'имя',
+        'phone' => 'телефон',
+        'email' => 'email',
+        'password' => 'пароль',
+        'currentPassword' => 'текущий пароль',
+        'newPassword' => 'новый пароль',
+        'message' => 'сообщение',
+        'consent' => 'согласие на обработку данных',
+        'city' => 'город',
+        'address' => 'адрес',
+        'items' => 'корзина',
+        'items.*.slug' => 'товар',
+        'items.*.qty' => 'количество',
+    ],
+];

@@ -1,0 +1,15 @@
+# Загрузки из админки: только картинки и PDF, скрипты здесь не выполняются
+Options -Indexes -ExecCGI
+<FilesMatch "\.(php\d?|phtml|phar|pl|py|cgi|sh|html?|js)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Deny from all
+  </IfModule>
+</FilesMatch>
+<IfModule mod_headers.c>
+  # SVG не может выполнить скрипт на домене сайта
+  Header always set Content-Security-Policy "default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; sandbox"
+  Header set Cache-Control "public, max-age=2592000, immutable"
+</IfModule>
